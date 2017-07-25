@@ -1,0 +1,26 @@
+ssh -i iic.pem ubuntu@54.179.147.4
+
+//Pull content from jehan pakistan repository.
+
+cd /var/www/html
+sudo git pull
+zahid-khurshid-kinnect2
+zahidmscs121
+
+
+///////////mysql
+
+sudo mysql -u root -p 
+
+Jeh@nP@kistan
+
+use jehan_pakistan
+
+
+//how to give write permission
+sudo chmod 755 -R local/public/photos/temp 
+sudo chmod 755 -R local/public/edition/pages
+
+
+//for copying files or directory to server using linux
+scp -r \desktop\incubation\ ubuntu@54.179.147.4:/var/www/html
