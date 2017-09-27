@@ -8,8 +8,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @if (Auth::check())
 
+
+                @if (Auth::check())
                     <?php if(isset($home)){
                         $activeHome = $home;
                     }else{
@@ -27,11 +28,11 @@
                     <a class="navbar-brand" href="{{url('/welcome-Home')}}"><img src="{{asset('local/public/template/img/INNOVATION AND INCUBATION 02.png')}}" alt="" width="199" height="52" /></a>
                 @endif
             </div>
+
             <div class="navbar-collapse collapse ">
                 <ul class="nav navbar-nav">
 
                     @if (Auth::check())
-
                         <?php if(isset($home)){
                             $activeHome = $home;
                         }else{
@@ -40,8 +41,8 @@
                         ?>
                     <li class="dropdown">
                         <a href="{{url('/home')}}" class="dropdown-toggle" style="{{$activeHome}}" data-delay="0" data-close-others="false">Home</a>
-
                     </li>
+
                     @else
                         <?php if(isset($welcome)){
                             $activeWelcome = $welcome;
@@ -51,31 +52,12 @@
                         ?>
                         <li class="dropdown">
                             <a href="{{url('welcome-Home')}}" style="{{$activeWelcome}}" class="dropdown-toggle"  data-delay="0" data-close-others="false">Home</a>
-
                         </li>
                     @endif
 
-                    {{--<li class="dropdown">
-                        <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Features <i class="fa fa-angle-down"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="typography.html">Typography</a></li>
-                            <li><a href="components.html">Components</a></li>
-                            <li><a href="pricing-box.html">Pricing box</a></li>
-                            <li class="dropdown-submenu">
-                                <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown">Pages</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="fullwidth.html">Full width</a></li>
-                                    <li><a href="right-sidebar.html">Right sidebar</a></li>
-                                    <li><a href="left-sidebar.html">Left sidebar</a></li>
-                                    <li><a href="comingsoon.html">Coming soon</a></li>
-                                    <li><a href="search-result.html">Search result</a></li>
-                                    <li><a href="404.html">404</a></li>
-                                    <li><a href="register.html">Register</a></li>
-                                    <li><a href="login.html">Login</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>--}}
+
+
+
                         <?php if(isset($portfolio)){
                             $activePortfolio = $portfolio;
                         }else{
@@ -83,13 +65,70 @@
                         }
                         ?>
                     <li><a href="{{ url('/portfolio') }}"><span style="{{$activePortfolio}}">Portfolio</span></a></li>
+
                         <?php if(isset($about)){
                             $activeAboutClass =$about;
                         }else{
                             $activeAboutClass ='';
                         }
                         ?>
+
                         <li><a  href="{{ url('/about') }}"><span style="{{$activeAboutClass}}">About</span></a></li>
+
+                        <li class="dropdown">
+                            <?php if(isset($news)){
+                                $activenews = $news;
+                            }else{
+                                $activenews ='';
+                            }
+                            ?>
+                            <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false"><span style="{{$activenews}}">Events & News</span><i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+
+                                <li><a href="{{ url('/events') }}"><span style="{{$activenews}}">Events</span></a></li>
+                                <li><a href="{{ url('/news') }}"><span style="{{$activenews}}">News</span></a></li>
+                            </ul>
+                        </li>
+
+                        <?php if(isset($resources)){
+                            $activeresources = $resources;
+                        }else{
+                            $activeresources ='';
+                        }
+                        ?>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Resources<i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+
+                                <?php if(isset($resources)){
+                                    $activeresources = $resources;
+                                }else{
+                                    $activeresources ='';
+                                }
+                                ?>
+                                <li><a href="{{ url('/books') }}"><span style="{{$activeresources}}">Books</span></a></li>
+
+                                    <?php if(isset($resources)){
+                                        $activeresources = $resources;
+                                    }else{
+                                        $activeresources ='';
+                                    }
+                                    ?>
+                                <li><a href="{{ url('/articles') }}"><span style="{{$activeresources}}">Articles</span></a></li>
+
+                                    <?php if(isset($resources)){
+                                        $activeresources = $resources;
+                                    }else{
+                                        $activeresources ='';
+                                    }
+                                    ?>
+                                <li><a href="{{ url('/videos') }}"><span style="{{$activeresources}}">Videos</span></a></li>
+                            </ul>
+                        </li>
+
+
+
                     @if (Auth::guest())
                             <?php if(isset($login)){
                                 $activeLogin = $login;
@@ -97,13 +136,15 @@
                                 $activeLogin ='';
                             }
                             ?>
-                        <li><a href="{{ url('/loginUser') }}"><span style="{{$activeLogin}}">Login</span></a></li>
+                        {{--<li><a href="{{ url('/loginUser') }}"><span style="{{$activeLogin}}">Login</span></a></li>--}}
+
                                 <?php if(isset($contact)){
                                     $activeContact = $contact;
                                 }else{
                                     $activeContact ='';
                                 }
                                 ?>
+
                         <li><a href="{{url('/contact')}}"> <span style="{{$activeContact}}">Contact</span></a></li>
                     @else
                         <li class="dropdown">
@@ -122,14 +163,11 @@
                                         $activeChangePassword ='';
                                     }
                                     ?>
+                                <li><a href="{{url('/create-news')}}"><span style="{{$activeChangePassword}}">Add News</span></a></li>
+
                                 <li><a href="{{url('/change-password')}}"><span style="{{$activeChangePassword}}">Change Password</span></a></li>
 
                                 <li>
-                                    {{--  <a href="{{ url('/logoutUser') }}"
-                                         onclick="event.preventDefault();
-                                                       document.getElementById('logout-form').submit();">
-                                          Logout
-                                      </a>--}}
 
                                     <a href="{{ url('/logoutUser') }}">
                                         Logout

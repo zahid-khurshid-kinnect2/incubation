@@ -14,7 +14,7 @@
                     <div id="main-slider" class="main-slider flexslider">
                         <ul class="slides">
                             {{--  <li>
-                                  <img height="300" src="{{asset('local/public/template/img/slides/flexslider/1.jpg')}}" alt="" />
+                                  <img  src="{{asset('local/public/template/img/slides/flexslider/1.jpg')}}" alt="" />
                                   <div class="flex-caption">
                                       <h3>Modern Design</h3>
                                       <p>Duis fermentum auctor ligula ac malesuada. Mauris et metus odio, in pulvinar urna</p>
@@ -22,7 +22,7 @@
                                   </div>
                               </li>--}}
                             <li>
-                                <img height="300" src="{{asset('local/public/template/img/slides/flexslider/2.jpeg')}}" alt="" />
+                                <img src="{{asset('local/public/template/img/slides/flexslider/2.jpeg')}}" alt="" />
                                 <div class="flex-caption">
                                     <h3>IIC EMPOWERS</h3>
                                     <p>IIC empowers aspiring entrepreneurs to start and grow their companies as it is working to achieve the mission of UOL to equip the youth with the potential and confidence required to become a job creator.</p>
@@ -30,7 +30,7 @@
                                 </div>
                             </li>
                             {{--<li>--}}
-                                {{--<img height="300" src="{{asset('local/public/template/img/slides/flexslider/3.jpg')}}" alt="" />--}}
+                                {{--<img  src="{{asset('local/public/template/img/slides/flexslider/3.jpg')}}" alt="" />--}}
                                 {{--<div class="flex-caption">--}}
                                     {{--<h3>IIC GUIDES </h3>--}}
                                     {{--<p>IIC guides you how to convert your business idea in business plan through action oriented lecturing sessions.</p>--}}
@@ -38,7 +38,7 @@
                                 {{--</div>--}}
                             {{--</li>--}}
                             <li>
-                                <img height="300" src="{{asset('local/public/template/img/slides/flexslider/4.jpg')}}" alt="" />
+                                <img  src="{{asset('local/public/template/img/slides/flexslider/4.jpg')}}" alt="" />
                                 <div class="flex-caption">
                                     <h3>IIC</h3>
                                     <p>IIC is a mixed-use incubation center that provides legal, administrative and infrastructural support to aspiring entrepreneurs who have a business idea and want to start a business.</p>
@@ -46,7 +46,7 @@
                             </li>
 
                             <li>
-                                <img height="300" src="{{asset('local/public/template/img/slides/flexslider/5.jpg')}}" alt="" />
+                                <img  src="{{asset('local/public/template/img/slides/flexslider/5.jpg')}}" alt="" />
                                 <div class="flex-caption">
                                     <h3>IIC OFFERS</h3>
                                     <p>IIC offers complete range of services from office space to seed funding and from prototype development to mentoring and coaching.</p>
@@ -70,7 +70,7 @@
                 <div class="col-lg-12">
                     <div class="text-center">
                         <h2><span class="highlight">Welcome</span> </h2>
-                        <p>Innovation and Incubation Center (IIC), is an initiative of University of Lahore to bridge the gap between the industry and academia and transform knowledge into commercial success. IIC, is a mixed use incubator supporting technological and non-technological entrepreneurial projects. Understanding the importance of the role that SME’s can play in the development of economy of Pakistan, we are here to provide a nurturing environment to the young business and help them to survive the hostile environment. Further at IIC, we believe in promoting entrepreneurial mindset among the young lot and up skill them so that they gain to confidence to start their own businesses and become job providers instead of becoming job hunters. We at IIC welcome you to be a part of it and are here to help you to convert your business dreams into a reality.</p>
+                        <p>Innovation and Incubation Center (IIC), is an initiative of The University of Lahore to bridge the gap between the industry and academia and transform knowledge into commercial success. IIC, is a mixed use incubator supporting technological and non-technological entrepreneurial projects. Understanding the importance of the role that SME’s can play in the development of economy of Pakistan, we are here to provide a nurturing environment to the young business and help them to survive the hostile environment. Further at IIC, we believe in promoting entrepreneurial mindset among the young lot and up skill them so that they gain to confidence to start their own businesses and become job providers instead of becoming job hunters. We at IIC welcome you to be a part of it and are here to help you to convert your business dreams into a reality.</p>
                     </div>
                 </div>
             </div>
@@ -101,7 +101,7 @@
                             <p><strong>The IIC would provide following services:
                                 </strong></p>
 
-                            <h5>3.2.1 Business Planning & Awareness</h5>
+                            <h5>Business Planning & Awareness</h5>
                             <p>
                             <ol>
                                 <li>Dissemination of information and awareness regarding entrepreneurship and innovation among students</li>
@@ -254,11 +254,9 @@
                         <h2><span class="highlight">Our Strategic Partner</span> </h2>
                     </div>
                     <div class="col-xs-8 aligncenter client">
-                        <img alt="logo" style="width: 80%" src="{{asset('local/public/template/img/clients/stragic-partner1.png')}}" class="img-responsive" />
+                        <img alt="logo" style="width: 10%" src="{{asset('local/public/template/img/clients/stragic-partner1.png')}}" class="img-responsive" />
                     </div>
                 </div>
-
-
             </div>
         </div>
 

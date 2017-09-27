@@ -25,18 +25,34 @@
 
                    <p> An online portal that provides home improvement services. Here you can find specialists like electrician, plumber painter etc. At the beginning the areas of Wapda Town, Valenica, Bahria Town, Cantt and Defence Road shall be covered.</p>
 
-                    <h3>Motor bike hailing and ride sharing</h3>
+                    <h3>The March</h3>
 
-                    <p>An application that provides a platform through which the commuters shall be able to hail a nearby available registered motorbike or rideshare daily to university or work.</p>
+                    <p>A digital media startup that would digitally publish and write video news, reach people via social media.</p>
 
-                    <h3>Auto-Canic</h3>
+                    <h3>Click Go</h3>
 
-                    <p>A service that provides access to the network of mechanics. The users shall put their query to the service provider by calling the provided number if their car breaks down and needs some tuning. At the initial stage the area of canal road shall be covered especially.</p>
+                    <p>An online portal that would issue online tickets of inter-city bus services.</p>
 
                     <h3>3-Phase Inverter: (Prototype Development)</h3>
 
                     <p>Three-phase inverters are used for variable-frequency drive applications and for high power applications such as HVDC (High voltage direct circuit) power transmission.
                     </p>
+
+                    <h3>Easy Cargo </h3>
+
+                    <p>Online-ADDA for cargo vehicles; targeting their trip back from their main sortie in which they come empty most of the times.</p>
+
+                    <h3>Ajrak</h3>
+
+                    <p>An e-commerce website which will link artisans with consumers directly or through agents dealing in traditional handy crafts.</p>
+
+                    <h3>My Card</h3>
+
+                    <p>Mobile App to replace loyalty cards of brands</p>
+
+                    <h3>Linux Based Microwave Radio Unit</h3>
+
+                    <p>A start-up dealing in the domain of  Telecom Networks enabling companies to offer Carrier Class Network services to end users.</p>
 
                 </div>
             </div>

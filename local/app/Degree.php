@@ -11,4 +11,5 @@ class Degree extends Authenticatable
     protected $fillable = ['name' ,'contact_id'];
     protected $table = 'degree';
 
+
 }

@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', function (){
+    return view('welcome');
+});
+
 Route::get('welcome-Home', 'HomeController@welcomeHome');
 /*Auth::routes();*/
 
@@ -32,8 +36,6 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
-Route::get('/home', 'HomeController@index');
-
 Route::get('/contact', 'HomeController@contactUs');
 Route::post('/requestForm', 'HomeController@onRequestForm');
 
@@ -50,3 +52,17 @@ Route::get('/portfolio', 'HomeController@portfolio');
 Route::post('/deleteRecord', 'HomeController@deleteRecord');
 
 Route::get('/aboutOrganize', 'HomeController@aboutOrganize');
+
+Route::get('/news', 'HomeController@news');
+Route::get('/events', 'HomeController@events');
+Route::get('/books', 'HomeController@books');
+Route::get('/articles', 'HomeController@articles');
+Route::get('/videos', 'HomeController@videos');
+
+
+Route::get('/create-news','HomeController@createNews');
+Route::post('/save-news','HomeController@saveNews');
+Route::get('/editNews/{id}', 'HomeController@editNews');
+Route::post('/updateNews/{id}','HomeController@updateNews');
+
+

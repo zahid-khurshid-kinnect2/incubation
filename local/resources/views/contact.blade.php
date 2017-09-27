@@ -29,6 +29,29 @@
         <iframe id="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54453.01209404574!2d74.20877400875635!3d31.46056793557617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919018a8ea548c1%3A0x4a52db69c2c814f!2sThe+University+of+Lahore+-+Raiwind+Road+Campus!5e0!3m2!1sen!2s!4v1480422112344" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
 
     </div>
+
+    <div class="col-md-8 col-md-offset-2">
+
+        <div class="contact">
+            <div class="row">
+                <h2><span>GET IN</span> Touch</h2>
+
+            </div>
+            <div class="container">
+                <div class="row">
+                    <span><b>Phone:</b>042-35322501-12 Ext:5320</span><br>
+
+                    <span><b>Email:</b>info@iic.uol.edu.pk<br>
+                                       info@iic.uol.edu.pk<br>
+                                       ambreen.jabeen@lbs.uol.edu.pk</span><br>
+
+                    <span><b>Address:</b> Innovation & Incubation Center 5th Floor, Engineering Building-I The University Of Lahore 1-Km Defense Road Lahore.</span>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -190,7 +213,7 @@
                     <div class="form-group">
                         <div class="col-md-12">
                             <label class="input-size">Registration Number (Please attach a copy of your student/university
-                                card)</label>
+                                card in jpeg, jpg or png format)</label>
 
                             <div class="form-group">
                                 <div class="lt-col col s12">
@@ -259,7 +282,7 @@
 
                     <div class="form-group">
                         <div class="col-md-12">
-                            <label class="input-size">Approximated time required for profit generation</label>
+                            <label class="input-size">Approximated date for profit generation</label>
                             <input id="datetimepicker_mask" name="profit_generation" type="text" placeholder="Approximated time required for profit generation"
                                    class="form-control input-size">
 
@@ -439,3 +462,4 @@
         });
     </script>
 @endsection
+

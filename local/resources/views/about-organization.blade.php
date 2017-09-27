@@ -25,7 +25,7 @@
                     <p><strong>The IIC would provide following services:
                         </strong></p>
 
-                    <h5>3.2.1 Business Planning & Awareness</h5>
+                    <h5>Business Planning & Awareness</h5>
                     <p>
                     <ol>
                         <li>Dissemination of information and awareness regarding entrepreneurship and innovation among students</li>
@@ -37,7 +37,7 @@
                     </ol></p>
 
 
-                    <h5>3.2.2 Financial & Accounting</h5>
+                    <h5>Financial & Accounting</h5>
                     <p>
                     <ol>
                         <li>Access to capital and financing</li>
@@ -45,7 +45,7 @@
                         <li>Auditing accounts, revenues and expenses</li>
                     </ol></p>
 
-                    <h5>3.2.3 Training & Mentorship</h5>
+                    <h5>Training & Mentorship</h5>
                     <p>
 
                     <ol>
@@ -57,7 +57,7 @@
                     </ol></p>
 
 
-                    <h5>3.2.4 Administrative Services</h5>
+                    <h5>Administrative Services</h5>
                     <p>
                     <ol>
                         <li>Dealing and negotiating with entities outside UOL like government departments and companies etc. on behalf of the businesses</li>

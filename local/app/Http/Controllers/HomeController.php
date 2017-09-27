@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\ContactForm;
 use App\Degree;
+use App\News;
 use App\User;
 
 use Carbon\Carbon;
@@ -30,7 +31,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth', ['except' => ['contactUs', 'onRequestForm', 'getAbout', 'portfolio', 'welcomeHome', 'aboutOrganize']]);
+        $this->middleware('auth', ['except' => ['contactUs', 'onRequestForm', 'getAbout', 'portfolio', 'welcomeHome', 'aboutOrganize','news','events','books','articles','videos']]);
         $this->user_id = Auth::id();
     }
 
@@ -42,20 +43,20 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $data['home'] = 'color: #d9232d;';
+        $data['home'] = 'color: #fcc42f;';
         return view('home', $data);
     }
 
     public function welcomeHome()
     {
-        $data['welcome'] = 'color: #d9232d;';
+        $data['welcome'] = 'color: #fcc42f;';
         return view('welcome', $data);
     }
 
     public function contactUs()
     {
         $data['countries'] = DB::table('countries')->select('name', 'id')->orderBy('name', 'ASC')->get();
-        $data['contact'] = 'color: #d9232d;';
+        $data['contact'] = 'color: #fcc42f;';
         return view('contact', $data);
     }
 
@@ -166,6 +167,7 @@ class HomeController extends Controller
     {
 
         $mailData = array(
+
             'id' => $form->id,
 
         );
@@ -181,7 +183,10 @@ class HomeController extends Controller
     public function userDetail()
     {
         $data['registerRecord'] = ContactForm::orderBy('id', 'Desc')->paginate(15);
-        $data['userDetail'] = 'color: #d9232d;';
+        $data['userDetail'] = 'color: #fcc42f;';
+
+//      echo '<tt><pre>'; print_r($data); die;
+
         return view('dataDetail', $data);
     }
 
@@ -193,7 +198,7 @@ class HomeController extends Controller
 
     public function changePassword()
     {
-        $data['changePassword'] = 'color: #d9232d;';
+        $data['changePassword'] = 'color: #fcc42f;';
         return view("password.changePassword", $data)->with('title', 'Change Password');
     }
 
@@ -235,19 +240,54 @@ class HomeController extends Controller
     public function getAbout()
     {
 
-        $data['about'] = 'color: #d9232d;';
+        $data['about'] = 'color: #fcc42f;';
         return view('about', $data);
     }
 
     public function portfolio()
     {
-        $data['portfolio'] = 'color: #d9232d;';
+        $data['portfolio'] = 'color: #fcc42f;';
         return view('portfolio', $data);
     }
 
     public function aboutOrganize()
     {
         return view('about-organization');
+    }
+
+    public function news()
+    {
+        $data['news'] = 'color: #fcc42f;';
+
+        return view('news',$data);
+    }
+
+    public function events()
+    {
+        $data['events'] = 'color: #fcc42f;';
+
+        return view('events',$data);
+    }
+
+    public function books()
+    {
+        $data['books'] = 'color: #fcc42f;';
+
+        return view('books',$data);
+    }
+
+    public function articles()
+    {
+        $data['articles'] = 'color: #fcc42f;';
+
+        return view('articles',$data);
+    }
+
+    public function videos()
+    {
+        $data['videos'] = 'color: #fcc42f;';
+
+        return view('videos',$data);
     }
 
     public function deleteRecord()
@@ -264,8 +304,108 @@ class HomeController extends Controller
             return 1;
         }
 
-//        AIzaSyCG3_rZxaFhWrhovOuhrV-rnLfQ2NTy9Wk
     }
+
+
+
+    public function createNews()
+
+    {
+        return view ('add-news');
+    }
+
+    public function saveNews(Request $request)
+
+    {
+        $this->validate($request,[
+
+            'title'=>'required',
+            'description'=>'required',
+            'image_url'=>'required',
+
+        ]);
+
+
+        $news = new News();
+
+        $news->title = $request->title;
+        $news->description = $request->description;
+        $news->image_url = $request->image_url;
+
+
+        if($news->save()){
+
+            return redirect()->back()->with('success', 'News Saved successfully');
+
+        }
+
+
+    }
+
+    public function editNews($id)
+    {
+      $data['news'] = News::find($id);
+
+//              echo '<tt><pre>'; print_r($data); die;
+
+      return view('edit-news',$data);
+    }
+
+    public function updateNews(Request $request, $id)
+
+    {
+        $this->validate($request,[
+
+           'title' => 'required',
+           'description' => 'required',
+           'image_url' => 'required',
+
+        ]);
+
+        $news = News::find($id);
+
+        $fileRegisterNumber = $request->image_url;
+        if (isset($fileRegisterNumber)) {
+
+
+            $destinationPath = storage_path('images' . DIRECTORY_SEPARATOR . 'url');
+            $extension = $fileRegisterNumber->getClientOriginalExtension();
+            $filename = str_random(12) . ".{$extension}";
+            $fileRegisterNumber->move($destinationPath, $filename);
+            $news->image_url = $filename;
+
+            $news->title = $request->title;
+            $news->description = $request->description;
+            $news->image_url = $request->image_url;
+
+            if ($news->save()) {
+
+                return redirect()->back()->with('success', 'News updated successfully');
+            }
+        }
+
+
+    }
+
+
+    public function deleteNews($id)
+
+    {
+        News::destroy($id);
+        return redirect()->back()->with('success', 'News Deleted Successfully');
+
+    }
+
+
 
 }
 
+//Man. United (ENG)->attack mid and goal keeper-> defend
+//Liverpool (ENG)->attack and mid
+// Monaco (FRA)->defend
+// Bayern (GER)attack
+// Paris (FRA)attack
+// Man. City (ENG)->attack and mid
+//juventus->defend
+//barca->mid and defend
+//0010046171300010

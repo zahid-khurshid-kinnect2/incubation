@@ -7,7 +7,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>CSSPR</title>
+    <title>UOL.IIC</title>
     <!-- css -->
     <link href="{{asset('local/public/template/css/bootstrap.min.css')}}" rel="stylesheet" />
     <link href="{{asset('local/public/template/css/flexslider.css')}}" rel="stylesheet" media="screen" />
