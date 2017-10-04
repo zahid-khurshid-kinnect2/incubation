@@ -51,7 +51,6 @@
                     <p>Mobile App to replace loyalty cards of brands</p>
 
                     <h3>Linux Based Microwave Radio Unit</h3>
-
                     <p>A start-up dealing in the domain of  Telecom Networks enabling companies to offer Carrier Class Network services to end users.</p>
 
                 </div>
