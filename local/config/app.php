@@ -162,9 +162,9 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        MaddHatter\LaravelFullcalendar\ServiceProvider::class,
-        Skecskes\Calendar\CalendarServiceProvider::class,
-        Arkhas\Calendar\CalendarServiceProvider::class,
+//        MaddHatter\LaravelFullcalendar\ServiceProvider::class,
+//        Skecskes\Calendar\CalendarServiceProvider::class,
+//        Arkhas\Calendar\CalendarServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -230,9 +230,9 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'Calendar' => Arkhas\Calendar\Facades\Calendar::class,
+//        'Calendar' => Arkhas\Calendar\Facades\Calendar::class,
         'Form' => Collective\Html\FormFacade::class,
-        
+
 //        'Html' => Collective\Html\HtmlFacade::class,
     ],
 
