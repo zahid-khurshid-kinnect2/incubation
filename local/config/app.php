@@ -232,8 +232,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Calendar' => Arkhas\Calendar\Facades\Calendar::class,
         'Form' => Collective\Html\FormFacade::class,
+        
 //        'Html' => Collective\Html\HtmlFacade::class,
-
     ],
 
 ];
